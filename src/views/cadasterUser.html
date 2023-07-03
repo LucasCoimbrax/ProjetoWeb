@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="./css/styledCadaster.css" />
+    <link rel="text/javascript" href="./js/cadasterUser" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div
+        class="d-flex flex-column flex-md-row align-items-center md-5 p-3 px-md-4 mb-3 bg-black border-bottom shadow"
+      >
+        <h5 class="my-0 mr-md-auto font-weight-normal">
+          <span class="textContol"> Carteira de vacinação </span>
+        </h5>
+      </div>
+    </header>
+
+    <% if (cadastrado) { %>
+      <div class="alert alert-primary" role="alert">
+        <p> Usuário <%= usuario.nome %></p>
+      </div> <% } %>
+
+    <main>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Cadastro de Funcionários</h5>
+          <form
+            action="/cadasterUser"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <label for="name"> Nome: </label>
+            <input type="text" id="name" name="name" />
+            <label for="email"> Email: </label>
+            <input type="email" id="email" name="email" />
+            <label for="phone"> Telefone: </label>
+            <input type="tel" id="phone" name="phone" />
+            <label for="edv"> Edv: </label>
+            <input type="text" id="edv" name="edv" />
+            <label for="idade"> Idade: </label>
+            <input type="" id="idade" name="idade" />
+            <button type="submit" class="btn btn-primary">
+              Cadastrar Usuário
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
