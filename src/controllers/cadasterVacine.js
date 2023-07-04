@@ -1,4 +1,4 @@
-const vacine = require('../model/cadasterVacine');
+const vacine = require('../model/vacine');
 
 module.exports = {
     async vacine(req, res){

@@ -1,6 +1,6 @@
 // Importação
 const Sequelize = require('sequelize');
-const database = require('../config/db');
+const database = require('../config/bd');
  
 // Criando a tabela Sala
 const vacine = database.define('Vacine', {
