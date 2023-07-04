@@ -1,6 +1,6 @@
 // Importação
 const Sequelize = require('sequelize');
-const database = require('../config/db');
+const database = require('../config/bd');
 
 const vacine = require('./vacine')
  
