@@ -4,7 +4,7 @@ const database = require('../config/db');
  
 // Criando a tabela Sala
 const user = database.define('User', {
-    IDUser: {
+    IDVacina: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
@@ -15,22 +15,31 @@ const user = database.define('User', {
         type: Sequelize.STRING(50),
         allowNull: false
     },
- 
-    Email: {
+
+    Fabricante: {
         type: Sequelize.STRING(100),
         allowNull: false
     },
 
-    Telefone: {
-        type: Sequelize.STRING(11),
+    //A vacina X serve para Y.
+    Infos: {
+        type: Sequelize.STRING(255),
         allowNull: false
     },
 
-    EDV: {
-        type: Sequelize.STRING(12),
+    Doses: {
+        type: Sequelize.INTEGER,
         allowNull: false
     },
+
+    //Essa vacina fica ativa por X anos.
+    PeriodoAtivo: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+
     
+
 
 });
  
