@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const database = require('../config/db');
  
 // Criando a tabela Sala
-const user = database.define('User', {
+const vacine = database.define('Vacine', {
     IDVacina: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -37,11 +37,7 @@ const user = database.define('User', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
-
-    
-
-
 });
  
 // Exportando essa tabela
-module.exports = sala;
+module.exports = vacine;

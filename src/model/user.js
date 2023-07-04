@@ -37,4 +37,4 @@ const user = database.define('User', {
 });
  
 // Exportando essa tabela
-module.exports = sala;
+module.exports = user;
