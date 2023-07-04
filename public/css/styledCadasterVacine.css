@@ -1,0 +1,14 @@
+body {
+  background-color: #eeeeee;
+}
+
+.card-img-container {
+  height: 200px; /* Defina a altura desejada */
+  padding-top: 10px;
+}
+
+.card-img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
