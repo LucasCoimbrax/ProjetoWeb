@@ -1,5 +1,7 @@
+const user = require('../model/user');
+
 module.exports = {
     async user(req, res){
-        res.render('../view/perfilUser')
+        res.render('../views/perfilUser.ejs')
     }
 }
