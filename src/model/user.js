@@ -1,6 +1,8 @@
 // Importação
 const Sequelize = require('sequelize');
 const database = require('../config/db');
+
+const vacine = require('./vacine')
  
 // Criando a tabela Sala
 const user = database.define('User', {
@@ -35,6 +37,10 @@ const user = database.define('User', {
         allowNull: false
     }
 });
- 
+
+user.belongsTo(vacine, {
+    foreignKey: 'IDVacina'
+});
+
 // Exportando essa tabela
 module.exports = user;

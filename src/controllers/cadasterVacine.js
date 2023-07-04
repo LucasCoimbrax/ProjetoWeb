@@ -1,4 +1,4 @@
-const vacina = require('../model/cadasterVacine');
+const vacine = require('../model/cadasterVacine');
 
 module.exports = {
     async vacine(req, res){
@@ -10,10 +10,10 @@ module.exports = {
 
         await vacine.create({
             Nome: dados.name,
-            Fabricante: dados.manufacturer,
+            Fabricante: dados.fabricante,
             Infos: dados.infos,
             Doses: dados.doses,
-            PeriodoAtivo: dados.activePeriod
+            PeriodoAtivo: dados.periodoAtivo
         })
     }
 }
