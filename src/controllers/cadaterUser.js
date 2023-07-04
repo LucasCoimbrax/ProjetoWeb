@@ -6,7 +6,7 @@ module.exports = {
     async user(req, res){
         res.render('../views/cadasterUser')
     },
-    async userCadaster(req, res){
+    async cadasterUser(req, res){
         const dados = req.body;
 
         await user.create({
