@@ -13,6 +13,8 @@ const perfilUser = require('./src/controllers/perfilUser');
 const cadasterVacine = require('./src/controllers/cadasterVacine');
 const cadasterUser = require('./src/controllers/cadaterUser');
 
+
+
 route.get('/', loginUser.loginUser);
 route.get('/loginAdmin', loginAdmin.loginAdmin);
 
