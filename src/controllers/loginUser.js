@@ -6,8 +6,6 @@ module.exports = {
   async confererUser(req, res) {
     const login = req.body;
 
-    console.log(login)
-
     try {
       const edv = '12341234';
       const dateBirth = '2000-01-01';
