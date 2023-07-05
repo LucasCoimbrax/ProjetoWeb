@@ -1,0 +1,33 @@
+body {
+  background-color: #eeeeee;
+}
+
+.card-img-container {
+  height: 200px; /* Defina a altura desejada */
+  padding-top: 10px;
+}
+
+.card-img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.card {
+  position: absolute;
+  top: -200px;
+  width: 30rem;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-login-adm {
+  text-align: center;
+}
