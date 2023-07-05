@@ -1,25 +1,25 @@
 module.exports = {
-    async loginUser(req, res){
-        res.render('../views/loginUser')
-    },
-    
-    async confererUser(req, res){
+  async loginUser(req, res) {
+    res.render("../views/loginUser");
+  },
 
-        const login = req.body;
+  async confererUser(req, res) {
+    const login = req.body;
 
-        console.log(req.body)
+    console.log(login)
 
-        try{
-            const edv = 12341234;
-            const dateBirth = 01012000;
+    try {
+      const edv = '12341234';
+      const dateBirth = '2000-01-01';
 
-            if(edv !== login.edv || dateBirth !== login.dateBirth){
-                throw new Error("401 - Unauthorized")
-            }
+      if (edv != login.edv || dateBirth != login.dateBirth) {
+        throw new Error("401 - Unauntho");
+      }
 
-            res.render('../views/perfilUser')
-        }catch(err){
-            res.send(err)
-        }
+      res.redirect("/perfilUser");
+    } catch (e) {
+      console.log(e);
+      res.redirect("/");
     }
-}
+  },
+};

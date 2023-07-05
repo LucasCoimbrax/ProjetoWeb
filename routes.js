@@ -24,7 +24,7 @@ route.get('/cadasterUser', cadasterUser.user);
 
 route.get('/perfilAdmin', perfilAdmin.admin);
 
-route.get('/', loginUser.confererUser);
+route.post('/', loginUser.confererUser);
 
 route.post('/cadasterVacine', cadasterVacine.vacineCadaster);
 
