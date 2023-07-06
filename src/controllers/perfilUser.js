@@ -8,6 +8,11 @@ module.exports = {
 
     async insertFoto(req, res){
         console.log(req.body)
-        res.render('../views/perfilUser.ejs')
+        const u = await user.findByPk(1)
+        await user.update({
+            Foto: req.file.filename
+        },
+        {where: {IDUser: 1}})
+        res.redirect('/perfilUser')
     }
 }
