@@ -10,6 +10,8 @@ module.exports = {
             const email = '12341234';
             const password = '2000-01-01';
 
+            console.log(loginAdmin)
+
             if (email != loginAdmin.email || password != loginAdmin.password) {
                 throw new Error("401 - Unauntho");
             }
