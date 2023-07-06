@@ -1,73 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
 
-  <title>Cadastro</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
 
-  <link rel="stylesheet" href="./css/styledCadasterVacine.css" />
-  <img src="./img/BoschBanner.jpg" style="width: 100%; height: 300px" />
-</head>
+    <link rel="stylesheet" href="./css/styledCadasterVacine.css" />
+    <img src="./img/BoschBanner.jpg" style="width: 100%; height: 300px" />
+  </head>
 
-<body >
+  <script>
+    const myModal = document.getElementById("myModal");
+    const myInput = document.getElementById("myInput");
 
+    myModal.addEventListener("shown.bs.modal", () => {
+      myInput.focus();
+    });
+  </script>
 
-  <div class="container">
-
-    <div id="cardContainer" class="row justify-content-center">
-      <div class="col-sm-7">
-        <div class="card" style="width: 40rem; z-index: 15; position: relative; top: -95%">
-          <div class="card-img-container d-flex align-items-center justify-content-center">
-            
+  <body>
+    <div class="container">
+      <div id="cardContainer" class="row justify-content-center">
+        <div class="col-sm-7">
+          <div
+            class="card"
+            style="width: 40rem; z-index: 15; position: relative; top: -95%"
+          >
+            <div
+              class="card-img-container d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="./img/medico.png"
+                class="card-img-top custom-img"
+                alt="..."
+              />
+            </div>
+            <div class="card-body"></div>
           </div>
-          <div class="card-body"></div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-7">
+          <div
+            style="width: 40rem; z-index: 15; position: relative; top: -570%"
+          >
+            <div class="input-group">
+              <input
+                style="width: 40%; margin-right: 10px"
+                type="text"
+                class="form-control"
+                placeholder="Employer EDV"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-7">
+          <div
+            class="card"
+            style="width: 40rem; z-index: 15; position: relative; top: -84%"
+          >
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <img
+                    src="./img/user.png"
+                    class="card-img-top custom-img float-left"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-8 align-self-start">
+                  <p class="mt-1">Nome:</p>
+                  <p class="mt-1">EDV:</p>
+                  <p class="mt-1">Idade:</p>
+                  <p class="mt-1">Email:</p>
+
+                  <hr />
+
+                  <button class="btn btn-default float-right">
+                    <img src="./img/add.png" width="20" /> Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-7">
+          <div
+            class="card"
+            style="width: 40rem; z-index: 15; position: absolute; top: -207px"
+          >
+            <table>
+              <tr class="text-center">
+                <th>Nome</th>
+                <th>Dose</th>
+                <th>Lote</th>
+                <th>Fabricante</th>
+                <th>Data</th>
+              </tr>
+
+              <tbody id="tableUsers">
+                <tr class="text-center">
+                  <td
+                    class="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Wesley
+                  </td>
+                  <td>1</td>
+                  <td>1245</td>
+                  <td>Bosch</td>
+                  <td>10/12/1800</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Historic</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-
-    <div class="row justify-content-center">
-      <div class="col-sm-7">
-        <div style="width: 40rem; z-index: 15; position: absolute; top: -225px;">
-            <div class="input-group">
-                <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Name: ">
-            </div>
-           
-            <div class="input-group">
-                <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Dose: ">
-            </div>
-
-            <div class="input-group">
-                <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Batch: ">
-            </div>
-
-            <div class="input-group">
-                <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Manufacturer: ">
-            </div>
-
-            <div class="input-group">
-                <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Date:">
-            </div>
-      </div>
-
-            <button type="button" class="btn btn-success">Add</button>
-            <button type="button" class="btn btn-danger">Turn back</button>
-            
-
-        </div>
-
-    </div>
-
-
-</body>
-
+  </body>
 </html>
