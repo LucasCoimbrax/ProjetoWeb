@@ -28,4 +28,7 @@ route.post('/cadasterVacine', cadasterVacine.vacineCadaster);
 route.get('/cadasterUser', cadasterUser.user);
 route.post('/cadasterUser', multer(config).single('foto'), cadasterUser.cadasterUser);
 
+route.post('/perfilUser',multer(config).single('foto'), perfilUser.insertFoto);
+
+
 module.exports = route;
