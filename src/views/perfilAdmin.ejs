@@ -97,7 +97,7 @@
         <div class="col-sm-7">
           <div
             class="card"
-            style="width: 40rem; z-index: 15; position: relative; top: -84%"
+            style="width: 40rem; z-index: 15; position: relative; top: -95%"
           >
             <div class="card-body">
               <div class="row">
@@ -109,16 +109,19 @@
                   />
                 </div>
                 <div class="col-8 align-self-start">
-                  <p class="mt-1">Nome:</p>
-                  <p class="mt-1">EDV:</p>
-                  <p class="mt-1">Idade:</p>
-                  <p class="mt-1">Email:</p>
-
+                  <table >
+                    <tbody>
+                      <p></p>
+                      <%- tableContent %>
+                      
+                  </tbody>
+                </table>
                   <hr />
 
-                  <button class="btn btn-default float-right">
+                  <a href="/cadasterVacine?edv=<%= edvGet %>" class="btn btn-default float-right">
                     <img src="./img/add.png" width="20" /> Register
-                  </button>
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -135,26 +138,15 @@
             <table>
               <tr class="text-center">
                 <th>Nome</th>
-                <th>Dose</th>
-                <th>Lote</th>
                 <th>Fabricante</th>
+                <th>Informações</th>
+                <th>Dose</th>
+                <th>Periodo Ativo</th>
                 <th>Data</th>
               </tr>
 
-              <tbody id="tableUsers">
-                <tr class="text-center">
-                  <td
-                    class="btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    Wesley
-                  </td>
-                  <td>1</td>
-                  <td>1245</td>
-                  <td>Bosch</td>
-                  <td>10/12/1800</td>
-                </tr>
+              <tbody class="text-center">
+                <%- vacines %>
               </tbody>
             </table>
           </div>

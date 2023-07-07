@@ -37,32 +37,33 @@
 
     <div class="row justify-content-center">
       <div class="col-sm-7">
+        <form method="post" action="/cadasterVacine?edv=<%= edvGet %>">
         <div style="width: 40rem; z-index: 15; position: absolute; top: -225px;">
           <div class="input-group">
-            <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Name: ">
+            <input name="name" style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Name: ">
           </div>
 
           <div class="input-group">
-            <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Dose: ">
+            <input name="fabricante" style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Fabricante: ">
           </div>
 
           <div class="input-group">
-            <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Batch: ">
+            <input name="infos" style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Informação: ">
           </div>
 
           <div class="input-group">
-            <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control"
-              placeholder="Manufacturer: ">
+            <input name="doses" style="width: 40%; margin-bottom: 5px;" type="number" class="form-control"
+              placeholder="Dose: ">
           </div>
 
           <div class="input-group">
-            <input style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Date:">
+            <input name="periodoAtivo" style="width: 40%; margin-bottom: 5px;" type="number" class="form-control" placeholder="Periodo ativo:">
           </div>
         </div>
 
-        <button type="button" class="btn btn-success">Add</button>
-        <button type="button" class="btn btn-danger">Turn back</button>
-
+        <button type="submit" class="btn btn-success">Add</button>
+        <a href="/perfilAdmin" type="button" class="btn btn-danger">Turn back</a>
+      </form>
 
       </div>
 

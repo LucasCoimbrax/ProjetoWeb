@@ -7,8 +7,8 @@ module.exports = {
         const loginAdmin = req.body;
 
         try {
-            const name = '12341234';
-            const password = '2000-01-01';
+            const name = 'medico';
+            const password = '12345';
 
             if (name != loginAdmin.name || password != loginAdmin.password) {
                 throw new Error("401 - Unauthorized");
