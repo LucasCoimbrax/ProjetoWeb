@@ -13,9 +13,9 @@ module.exports = {
     const userSearch = await user.findAll({
       raw: true,
       attributes: ['IDUser', 'Nome', 'Email', 'Telefone', 'EDV', 'Idade'],
-      Where: { IDUser: edvGet}
+      where: { IDUser: edvGet}
     });
 
     res.render("../views/perfilAdmin", { userSearch, edvGet: '' });
-  },
+  }
 };

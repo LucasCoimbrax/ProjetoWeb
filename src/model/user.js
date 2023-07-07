@@ -32,6 +32,7 @@ const user = database.define('User', {
         type: Sequelize.STRING(12),
         allowNull: false
     },
+    
     Idade: {
         type: Sequelize.INTEGER,
         allowNull: false

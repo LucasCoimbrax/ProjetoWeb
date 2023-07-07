@@ -23,3 +23,14 @@
         `login: ProjetoWeb Vacinas`
         `senha: Pr0j3t0W3bV4c1n45`
 
+
+-----------------------------------------------------------------
+
+### Páginas criadas
+
+    1. '/' - Login User:
+    2. '/loginAdmin' - Login Admin:
+    3. '/perfilUser' - Perfil user:
+    4. '/perfilAdmin' - Perfil Admin:
+    5. '/cadasterUser' - Cadastro User:
+    6. '/cadasterVacine' - Cadastro Vacine:
