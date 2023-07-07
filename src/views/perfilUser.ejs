@@ -42,7 +42,7 @@ myModal.addEventListener('shown.bs.modal', () => {
         <div class="card" style="width: 40rem; z-index: 15; position: absolute; top: -200px">
           <div class="card-img-container d-flex align-items-center justify-content-center">
             <%console.log(user)%>
-            <form action="/perfilUser" method="post" enctype="multipart/form-data">
+            <form action="/perfilUser?EDV=<%=user.EDV%>" method="post" enctype="multipart/form-data">
               <img src="./img/<%=user.Foto%>" class="card-img-top custom-img" alt="..." id="imgFoto" style="border-radius: 50%;"/>
               <input onchange="this.form.submit()" type="file" id="flImage" name="foto" accept="image/*">
             </form>
