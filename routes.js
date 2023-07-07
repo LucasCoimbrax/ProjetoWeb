@@ -25,8 +25,8 @@ route.post('/', loginUser.confererUser);
 route.post('/loginAdmin', loginAdmin.confererAdmin)
 route.post('/perfilAdmin', perfilAdmin.adminSearch)
 
-route.post('/cadasterVacine', cadasterVacine.vacineCadaster);
-
 route.post('/cadasterUser', multer(config).single('foto'), cadasterUser.cadasterUser);
+route.post('/cadasterVacine', cadasterVacine.cadasterVacine);
+
 
 module.exports = route;
