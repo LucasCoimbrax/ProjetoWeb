@@ -8,16 +8,24 @@ module.exports = {
   async adminSearch(req, res) {
     let edvGet = req.body.EDVSearch;
 
-    console.log(edvGet)
-
-    const userSearch = await user.findAll({
-      raw: true,
-      attributes: ['IDUser', 'Nome', 'Email', 'Telefone', 'EDV', 'Idade'],
-      where: { IDUser: edvGet}
-    });
-
-    console.log(userSearch);
-
-    res.render("../views/perfilAdmin", { userSearch, edvGet: '' });
+    try{
+      if(!edvGet){
+        throw new Error("400 - Bad Request, EDV Invalid!")
+      }
+  
+      const userSearch = await user.findAll({
+        raw: true,
+        attributes: ['IDUser', 'Nome', 'Email', 'Telefone', 'EDV', 'Idade'],
+        where: { IDUser: edvGet}
+      });
+  
+      console.log(userSearch);
+  
+      res.render("../views/perfilAdmin", { userSearch, edvGet: '' });
+    }catch(e){
+      console.log(e);
+      res.redirect('/perfilAdmin')
+    }
+    
   }
 };
