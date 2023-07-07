@@ -16,6 +16,7 @@ module.exports = {
             PeriodoAtivo: dados.periodoAtivo,
             EDV: req.query.edv
         })
-        res.redirect("/perfilAdmin")
+        res.redirect(`/perfilAdmin?edv=${req.query.edv}`)
     }
 }
+
