@@ -20,9 +20,9 @@ route.get('/loginAdmin', loginAdmin.loginAdmin);
 route.get('/perfilUser', perfilUser.user);
 route.get('/cadasterVacine', cadasterVacine.vacine);
 route.get('/cadasterUser', cadasterUser.user);
-
-
 route.get('/perfilAdmin', perfilAdmin.admin);
+
+route.post('/perfilAdmin', perfilAdmin.adminSearch)
 
 route.post('/', loginUser.confererUser);
 route.post('/loginAdmin', loginAdmin.confererAdmin)
