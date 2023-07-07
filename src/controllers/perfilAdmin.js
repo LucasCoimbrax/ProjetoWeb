@@ -13,7 +13,7 @@ module.exports = {
   },
 
   async adminSearch(req, res) {
-    let edvGet = req.body.EDVSearch || (req.query.edv ? req.query.edv : "");
+    let edvGet = req.query.edv || req.body.EDVSearch || "";
  
     const userSearch = await user.findAll({
       raw: true,
