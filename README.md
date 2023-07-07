@@ -35,12 +35,14 @@
             - Edv;
             - Data de nascimento;
 
+
     2. '/loginAdmin' - Login Admin:
         -> Página de login do Admin, possui 2 campos como parametros de 
         entrada para acessar a página de Perfil Admin;
 
             - Login;
             - Senha;
+
 
     3. '/perfilUser' - Perfil user:
 
@@ -57,6 +59,7 @@
             - Telefone;
             - Edv;
             - Data de nascimento;
+            
 
     6. '/cadasterVacine' - Cadastro Vacine:
         -> Página onde o Admin consegue cadastrar novas vacinas, passando os 
