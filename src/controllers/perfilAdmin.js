@@ -16,6 +16,8 @@ module.exports = {
       where: { IDUser: edvGet}
     });
 
+    console.log(userSearch);
+
     res.render("../views/perfilAdmin", { userSearch, edvGet: '' });
   }
 };
