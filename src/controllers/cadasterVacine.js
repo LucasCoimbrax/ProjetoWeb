@@ -1,9 +1,9 @@
 const vacine = require("../model/vacine");
 
 module.exports = {
-  async vacine(req, res) {
-    res.render("../views/cadasterVacine");
-  },
+    async vacine(req, res){
+        res.render('../views/cadasterVacine',{edvGet: req.query.edv})
+    },
 
   async cadasterVacine(req, res) {
     const dados = req.body;
@@ -24,7 +24,9 @@ module.exports = {
             PeriodoAtivo: dados.periodoAtivo,
         });
 
-        res.redirect('/perfilAdmin')
+        EDV: req.query.edv
+        
+        res.redirect(`/perfilAdmin?edv=${req.query.edv}`)
     }catch(e){
         console.log(e)
         res.redirect("/cadasterVacine");
