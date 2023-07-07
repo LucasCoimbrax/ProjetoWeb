@@ -29,9 +29,5 @@ module.exports = {
         console.log(e)
         res.redirect("/cadasterVacine");
     }
-
-
-
-    res.redirect("/perfilAdmin")
   }
 };
