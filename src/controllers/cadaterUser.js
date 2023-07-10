@@ -10,20 +10,7 @@ module.exports = {
     const dados = req.body;
 
     try {
-      let foto = "usuer.png";
-
-        await user.create({
-            Nome: dados.name,
-            Email: dados.email,
-            Telefone: dados.phone,
-            EDV: dados.edv,
-            DataNascimento: dados.age,
-            Foto: foto
-        })
-        res.redirect('/')
-      if (req.file) {
-        foto = req.file.filename;
-      }
+      let foto = "user.png";
 
       const anoNascimento = dados.dateBirth.split("-")[0];
       const anoAtual = new Date().getFullYear();
