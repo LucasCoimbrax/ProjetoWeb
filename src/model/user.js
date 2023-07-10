@@ -28,7 +28,7 @@ const user = database.define('User', {
         allowNull: false
     },
 
-    DataNascimento: {
+    DateBirth: {
         type: Sequelize.STRING(10),
         allowNull: false
     },

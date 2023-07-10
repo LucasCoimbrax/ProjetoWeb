@@ -12,7 +12,7 @@ module.exports = {
 
     try{
 
-        if(!dados.name || !dados.fabricante || !dados.infos || !dados.doses || !periodoAtivo){
+        if(!dados.name || !dados.fabricante || !dados.infos || !dados.doses || !dados.periodoAtivo){
             throw new Error("401 - Bad Request, Forms Invalid!")
         }
 

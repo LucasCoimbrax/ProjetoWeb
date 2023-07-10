@@ -37,10 +37,10 @@ module.exports = {
       const phoneUser = dados.phone.replace(" ", "").replace("(","").replace(")","");
 
       await user.create({
+        EDV: dados.edv,
         Nome: dados.name,
         Email: dados.email,
         Telefone: phoneUser,
-        EDV: dados.edv,
         Idade: idade,
         DateBirth: dados.dateBirth,
         Foto: foto,
@@ -49,7 +49,7 @@ module.exports = {
       res.redirect("/perfilAdmin");
     } catch (err) {
       console.log(err);
-      res.redirect("/cadasterUser");
+      res.redirect("/");
     }
   },
 };

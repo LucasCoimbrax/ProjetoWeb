@@ -11,20 +11,17 @@ module.exports = {
     try {
       const userEDV = await user.findOne({
         raw: true,
-        attributes: ['EDV', 'Nome', 'Email', 'Telefone','DataNascimento'],
-        where: { EDV: login.edv, DataNascimento: login.dateBirth}
+        attributes: ['EDV', 'DateBirth'],
+        where: { EDV: login.edv, DateBirth: login.dateBirth}
       });
 
       if (!userEDV) {
-        return res.render('../views/loginUser', {message: true})
-        // throw new Error("401 - Unauntho");
-        
+        return res.render('../views/loginUser', {message: true})        
       }
 
       res.redirect(`/perfilUser?EDV=${login.edv}`);
     } catch (e) {
-      console.log(e);
       res.redirect("/");
     }
-  },
+  }
 };
