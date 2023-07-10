@@ -1,5 +1,4 @@
 const user = require("../model/user");
-const vacine = require("../model/vacine");
 
 module.exports = {
   async user(req, res) {
