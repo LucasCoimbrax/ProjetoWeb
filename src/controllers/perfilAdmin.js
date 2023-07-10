@@ -12,6 +12,7 @@ module.exports = {
       tableContent,
       vacines: "",
       edvGet: req.query.edv,
+      Foto: "user.png"
     });
   },
 
@@ -25,7 +26,7 @@ module.exports = {
 
       const userSearch = await user.findAll({
         raw: true,
-        attributes: ["Nome", "Email", "Telefone", "EDV", "Idade"],
+        attributes: ["Nome", "Email", "Telefone", "EDV", "Idade", "Foto"],
         where: { EDV: edvGet },
       });
 
@@ -46,6 +47,8 @@ module.exports = {
         tableContent += "<tr><td>Email: </td><td></td></tr>";
       }
 
+      let Foto = userSearch[0].Foto
+
       const vaccines = await vacine.findAll({
         raw: true,
         where: { EDV: edvGet },
@@ -65,7 +68,7 @@ module.exports = {
         vacines += "</tr>";
       }
 
-      res.render("../views/perfilAdmin.ejs", { tableContent, vacines, edvGet });
+      res.render("../views/perfilAdmin.ejs", { tableContent, vacines, edvGet, Foto });
     } catch (e) {
       console.log(e);
       res.redirect("/perfilAdmin");

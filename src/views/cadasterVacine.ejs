@@ -23,7 +23,7 @@
     <img src="./img/BoschBanner.jpg" style="width: 100%; height: 300px" />
   </head>
 
-  <!-- <body>
+  <body>
     <main>
       <div class="container">
         <div id="cardContainer" class="row justify-content-center">
@@ -31,10 +31,7 @@
             <div class="card">
               <h5 class="card-title">Cadastro de Vacina</h5>
               <div class="card-body">
-                <form
-                  action="/cadasterVacine"
-                  method="post"
-                >
+                <form action="/cadasterVacine?edv=<%= edvGet %>" method="post">
                   <label for="name"> Nome: </label>
                   <input
                     type="text"
@@ -88,57 +85,6 @@
             </div>
           </div>
         </div>
-  <link rel="stylesheet" href="./css/styledCadasterVacine.css" />
-  <img src="./img/BoschBanner.jpg" style="width: 100%; height: 300px" />
-</head> -->
-
-<body>
-
-
-  <div class="container">
-
-    <div id="cardContainer" class="row justify-content-center">
-      <div class="col-sm-7">
-        <div class="card" style="width: 40rem; z-index: 15; position: relative; top: -95%">
-          <div class="card-img-container d-flex align-items-center justify-content-center">
-
-          </div>
-          <div class="card-body"></div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row justify-content-center">
-      <div class="col-sm-7">
-        <form method="post" action="/cadasterVacine?edv=<%= edvGet %>">
-        <div style="width: 40rem; z-index: 15; position: absolute; top: -225px;">
-          <div class="input-group">
-            <input name="name" style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Name: ">
-          </div>
-
-          <div class="input-group">
-            <input name="fabricante" style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Fabricante: ">
-          </div>
-
-          <div class="input-group">
-            <input name="infos" style="width: 40%; margin-bottom: 5px;" type="text" class="form-control" placeholder="Informação: ">
-          </div>
-
-          <div class="input-group">
-            <input name="doses" style="width: 40%; margin-bottom: 5px;" type="number" class="form-control"
-              placeholder="Dose: ">
-          </div>
-
-          <div class="input-group">
-            <input name="periodoAtivo" style="width: 40%; margin-bottom: 5px;" type="number" class="form-control" placeholder="Periodo ativo:">
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-success">Add</button>
-        <a href="/perfilAdmin" type="button" class="btn btn-danger">Turn back</a>
-      </form>
-
       </div>
     </main>
   </body>

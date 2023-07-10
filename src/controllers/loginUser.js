@@ -11,8 +11,8 @@ module.exports = {
     try {
       const userEDV = await user.findOne({
         raw: true,
-        attributes: ['EDV', 'Nome', 'Email', 'Telefone','DataNascimento'],
-        where: { EDV: login.edv, DataNascimento: login.dateBirth}
+        attributes: ['EDV', 'DateBirth'],
+        where: { EDV: login.edv, DateBirth: login.dateBirth}
       });
 
       if (!userEDV) {
