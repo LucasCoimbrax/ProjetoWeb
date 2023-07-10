@@ -106,7 +106,8 @@
                   <img
                     src="/img/<%= Foto %>"
                     class="card-img-top custom-img float-left"
-                    alt="..."
+                    style="border-radius: 50%;"
+                    alt="Foto Usuário"
                   />
                 </div>
                 <div class="col-8 align-self-start">
@@ -118,14 +119,18 @@
                   </tbody>
                 </table>
                   <hr />
-
-                  <!-- <button href="/cadasterVacine" class="btn btn-default float-right">
-                    <img src="./img/add.png" width="20" /> 
-                    <a href="/cadasterVacine" >Register </a>
-                  </button> -->
-                  <a href="/cadasterVacine?edv=<%= edvGet %>" class="btn btn-default float-right">
-                    <img src="./img/add.png" width="20" /> Register
-                  </a>
+                  
+                  <div class="d-flex justify-content-around">
+                    <a href="/cadasterUser?edv=<%= edvGet %>" class="btn btn-default float-right">
+                      <img src="./img/add.png" width="20" style="filter: hue-rotate(250deg) saturate(
+                        200%
+                        );" /> Register New User
+                    </a>
+  
+                    <a href="/cadasterVacine?edv=<%= edvGet %>" class="btn btn-default float-right">
+                      <img src="./img/add.png" width="20" /> Register Vacine
+                    </a>
+                  </div>
 
                 </div>
               </div>

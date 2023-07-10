@@ -30,4 +30,5 @@ module.exports = {
         res.redirect("/cadasterVacine");
     }
   }
+  
 };
