@@ -35,6 +35,15 @@ const user = database.define('User', {
 
     Foto: {
         type: Sequelize.STRING(50),
+    },
+    
+    Idade: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    
+    DateBirth: {
+        type: Sequelize.STRING(10),
         allowNull: false
     }
 });

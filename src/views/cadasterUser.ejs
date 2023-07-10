@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,41 +21,80 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+
+    <link rel="stylesheet" href="./css/styledCadasterUser.css" />
+    <img src="./img/BoschBanner.jpg" style="width: 100%; height: 300px" />
   </head>
   <body>
-    <header>
-      <div
-        class="d-flex flex-column flex-md-row align-items-center md-5 p-3 px-md-4 mb-3 bg-black border-bottom shadow"
-      >
-        <h5 class="my-0 mr-md-auto font-weight-normal">
-          <span class="textContol"> Carteira de vacinação </span>
-        </h5>
-      </div>
-    </header>
-
     <main>
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Cadastro des Funcionários</h5>
-          <form
-            action="/cadasterUser"
-            method="post"
-            enctype="multipart/form-data"
-          >
-            <label for="name"> Nome: </label>
-            <input type="text" id="name" name="name" />
-            <label for="email"> Email: </label>
-            <input type="email" id="email" name="email" />
-            <label for="phone"> Telefone: </label>
-            <input type="tel" id="phone" name="phone" />
-            <label for="edv"> Edv: </label>
-            <input type="text" id="edv" name="edv" />
-            <label for="idade"> Data Nascimento: </label>
-            <input type="date" id="idade" name="age" />
-            <button type="submit" class="btn btn-primary">
-              Cadastrar Usuário
-            </button>
-          </form>
+      <div class="container">
+        <div id="cardContainer" class="row justify-content-center">
+          <div class="col-sm-6">
+            <div class="card">
+              <h5 class="card-title">Cadastro de Funcionários</h5>
+              <div class="card-img-container">
+                <img
+                  src="./img/user.png"
+                  class="card-img-top custom-img"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <form
+                  action="/cadasterUser"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                  <label for="name"> Nome: </label>
+                  <input 
+                    type="text"
+                    class="form-control"
+                    placeholder="Insert name user"
+                    aria-label="Username"
+                    aria-describedby="addon-wrapping"
+                    name="name"
+                  />
+                  <label for="email"> Email: </label>
+                  <input 
+                    type="email"
+                    class="form-control"
+                    placeholder="Insert Email user"
+                    aria-label="Email"
+                    aria-describedby="addon-wrapping"
+                    name="email"
+                  />
+                  <label for="phone"> Telefone: </label>
+                  <input 
+                    type="tel"
+                    class="form-control"
+                    placeholder="Insert Phone user"
+                    aria-label="phone"
+                    aria-describedby="addon-wrapping"
+                    name="phone" />
+                  <label for="edv"> Edv: </label>
+                  <input 
+                    type="text" 
+                    class="form-control"
+                    placeholder="Insert Edv user"
+                    aria-label="Edv"
+                    aria-describedby="addon-wrapping" 
+                    name="edv" />
+                  <label for="dateBirth"> Data de Nascimento: </label>
+                  <input 
+                    type="date"
+                    class="form-control"
+                    placeholder="Insert DateBirth user"
+                    aria-label="DateBirth"
+                    aria-describedby="addon-wrapping" 
+                    name="dateBirth"
+                  />
+                  <button type="submit" class="btn btn-primary">
+                    Cadastrar Usuário
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

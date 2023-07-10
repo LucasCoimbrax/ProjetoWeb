@@ -37,6 +37,12 @@ const vacine = database.define('Vacine', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
+
+       //Essa vacina fica ativa por X anos.
+       EDV: {
+        type: Sequelize.STRING(12),
+        allowNull: false
+    },
 });
  
 // Exportando essa tabela
