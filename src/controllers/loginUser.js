@@ -7,11 +7,11 @@ module.exports = {
     const login = req.body;
 
     try {
-      const edv = '12341234';
-      const dateBirth = '2000-01-01';
+      const edv = "12341234";
+      const dateBirth = "2000-01-01";
 
       if (edv != login.edv || dateBirth != login.dateBirth) {
-        throw new Error("401 - Unauntho");
+        throw new Error("401 - Unauthorized");
       }
 
       res.redirect("/perfilUser");
