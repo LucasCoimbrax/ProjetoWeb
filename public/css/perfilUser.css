@@ -5,3 +5,25 @@
 .span-td{
     font-weight: bold;
 }
+
+.btns-topo{
+    width: 100%;
+    padding: 15px;
+}
+
+.btn-vacina{
+    width: 35%;
+    margin: 0 auto;
+}
+
+#flImage{
+    display: none;
+}
+
+#imgFoto{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}

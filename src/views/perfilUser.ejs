@@ -1,93 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Cadastro</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
+  <title>Cadastro</title>
 
-    <link rel="stylesheet" href="./css/styledCadasterVacine.css" />
-    <link rel="stylesheet" href="../../public/css/perfilUser.css">
-  </head>
-  <body>
-    <header>
-      <div>
-        <img src="./img/BoschBanner.jpg" style="width: 100%; height: 300px" />
-      </div>
-    </header>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <div class="container">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="./css/styledCadasterVacine.css" />
+  <link rel="stylesheet" href="./css/perfilUser.css">
+  <img src="./img/BoschBanner.jpg" style="width: 100%; height: 300px" />
+</head>
 
-      <div id="cardContainer" class="row justify-content-center">
-        <div class="col-sm-7">
-          <div class="card" style="width: 40rem; z-index: 15; position: absolute; top: -200px">
-            <div class="card-img-container d-flex align-items-center justify-content-center">
-              <img src="./img/medico.png" class="card-img-top custom-img" alt="..." />
-            </div>
-            <div class="card-body">
-              <div class="d-flex justify-content-center div-table">
-                <table class="table table-borderless">
-                  <tbody>
-                    <tr>
-                      <td><strong>Nome:</strong> Nome Aqui</td>
-                      <td><strong>EDV:</strong> 12341234</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Data nascimento:</strong> 12/12/1212</td>
-                      <td><strong>Telefone:</strong> 41912341234</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+<script>
+  const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+</script>
+
+<body >
+
+
+  <div class="container">
+
+    <div id="cardContainer" class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="card" style="width: 40rem; z-index: 15; position: absolute; top: -200px">
+          <div class="card-img-container d-flex align-items-center justify-content-center">
+            <%console.log(user)%>
+            <form action="/perfilUser?EDV=<%=user.EDV%>" method="post" enctype="multipart/form-data">
+              <img src="./img/<%=user.Foto%>" class="card-img-top custom-img" alt="..." id="imgFoto" style="border-radius: 50%;"/>
+              <input onchange="this.form.submit()" type="file" id="flImage" name="foto" accept="image/*">
+            </form>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-center div-table">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <td><strong>Nome:</strong> <%=user.Nome%></td>
+                    <td><strong>EDV:</strong> <%=user.EDV%></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Data nascimento:</strong> <%=user.DataNascimento%></td>
+                    <td><strong>Telefone:</strong><%=user.Telefone%></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
-  
-      <div id="cardContainer" class="row justify-content-center">
-        <div class="row justify-content-center">
-          
-            <div class="card " style="width: 40rem; z-index: 15; position: relative;">
-              <table>
-                
-                <tr>
-                  <th>Nome</th>
-                  <th>Dose</th>
-                  <th>Lote</th>
-                  <th>Fabricante</th>
-                  <th>Data</th>
-                </tr>
-          
-              <tbody id="tableUsers">
-                <tr>
-                  <td>Wesley</td>
-                  <td>1</td>
-                  <td>1245</td>
-                  <td>Bosch</td>
-                  <td>10/12/1800</td>
-                </tr>
-              </tbody>
-    
-            </table>
-            </div>
-          
-        </div>
-              
-            
-        
     </div>
-  </body>
+
+    <div class="row justify-content-center">
+      <div class="col-sm-6">
+        <div class="card" style="width: 40rem; z-index: 15; position: absolute; top: 150px;">
+
+          <div class="btns-topo d-flex justify-content-center">
+            <input type="button" value="Vacinas Tomadas" class="btn btn-light btn-vacina">
+            <input type="button" value="Vacinas Pendentes" class="btn btn-light btn-vacina">
+          </div>
+
+          <table>
+            
+            <tr class="text-center">
+              <th>Nome</th>
+              <th>Dose</th>
+              <th>Lote</th>
+              <th>Fabricante</th>
+              <th>Data</th>
+            </tr>
+      
+          <tbody id="tableUsers">
+            <tr class="text-center">
+              <td class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" >Wesley</td>
+              <td>1</td>
+              <td>1245</td>
+              <td>Bosch</td>
+              <td>10/12/1800</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        </div>
+      </div>
+    </div>
+  
+      
+
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+
 </html>
+

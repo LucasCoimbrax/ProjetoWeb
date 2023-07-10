@@ -6,13 +6,13 @@ const vacine = require('./vacine')
  
 // Criando a tabela Sala
 const user = database.define('User', {
-    IDUser: {
+
+    EDV: {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
- 
+    
     Nome: {
         type: Sequelize.STRING(50),
         allowNull: false
@@ -28,13 +28,17 @@ const user = database.define('User', {
         allowNull: false
     },
 
-    EDV: {
-        type: Sequelize.STRING(12),
+    DataNascimento: {
+        type: Sequelize.STRING(10),
         allowNull: false
     },
 
     Idade: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
+    },
+
+    Foto: {
+        type: Sequelize.STRING(50),
         allowNull: false
     },
     

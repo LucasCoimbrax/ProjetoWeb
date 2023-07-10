@@ -7,6 +7,7 @@ const database = new sequelize('projetoweb', 'ProjetoWeb Vacinas', 'Pr0j3t0W3bV4
     dialect: 'mssql', host:'localhost', port: 50658
     //wesley : 65054
     //Lucas: 50658
+    //Rapha: 63333
 });
  
 database.sync();

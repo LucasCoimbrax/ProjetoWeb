@@ -1,23 +1,27 @@
+const user = require("../model/user");
+
 module.exports = {
   async loginUser(req, res) {
-    res.render("../views/loginUser");
+    res.render("../views/loginUser", {message: false});
   },
 
   async confererUser(req, res) {
     const login = req.body;
 
     try {
-      const edv = "12341234";
-      const dateBirth = "2000-01-01";
+      const userEDV = await user.findOne({
+        raw: true,
+        attributes: ['EDV', 'Nome', 'Email', 'Telefone','DataNascimento'],
+        where: { EDV: login.edv, DataNascimento: login.dateBirth}
+      });
 
-      if (edv != login.edv || dateBirth != login.dateBirth) {
-        throw new Error("401 - Unauthorized");
+      if (!userEDV) {
+        return res.render('../views/loginUser', {message: true})        
       }
 
-      res.redirect("/perfilUser");
+      res.redirect(`/perfilUser?EDV=${login.edv}`);
     } catch (e) {
-      console.log(e);
       res.redirect("/");
     }
-  },
+  }
 };

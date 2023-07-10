@@ -29,4 +29,7 @@ route.post('/cadasterUser', multer(config).single('foto'), cadasterUser.cadaster
 route.post('/cadasterVacine', cadasterVacine.cadasterVacine);
 
 
+route.post('/perfilUser',multer(config).single('foto'), perfilUser.insertFoto);
+
+
 module.exports = route;
