@@ -19,6 +19,8 @@ module.exports = {
   async adminSearch(req, res) {
     let edvGet = req.body.EDVSearch || (req.query.edv ? req.query.edv : "");
 
+    let Foto
+
     try {
       if (!edvGet) {
         throw new Error("400 - Bad Request, EDV Invalid!");
@@ -51,6 +53,7 @@ module.exports = {
 
       const vaccines = await vacine.findAll({
         raw: true,
+        attributes: ["Nome", "Fabricante", "Infos", "Doses", "PeriodoAtivo", "createdAt"],
         where: { EDV: edvGet },
       });
 

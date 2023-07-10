@@ -44,9 +44,5 @@ const user = database.define('User', {
     }
 });
 
-user.belongsTo(vacine, {
-    foreignKey: 'IDVacina'
-});
-
 // Exportando essa tabela
 module.exports = user;

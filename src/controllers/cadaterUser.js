@@ -12,6 +12,10 @@ module.exports = {
     try {
       let foto = "user.png";
 
+      if (req.file) {
+        foto = req.file.filename;
+      }
+
       const anoNascimento = dados.dateBirth.split("-")[0];
       const anoAtual = new Date().getFullYear();
 
