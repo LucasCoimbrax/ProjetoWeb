@@ -117,9 +117,14 @@
                 <div class="col-8 align-self-start">
                   <table >
                     <tbody>
-                      <a href="/cadasterVacine?edv=<%= edvGet %>" class="btn btn-outline-danger float-right">
-                        <img src="./img/remove.png" width="20" /> Delete this user
-                      </a>
+                      <form action="/deleteUser?edv=<%= edvGet %>" method="post">
+                        <button class="btn btn-outline-danger float-right">
+                          <img src="./img/remove.png" width="20" /> Delete this user
+                        </button>
+                      </form>
+                      <% if(message){%>
+                        <p style="position: absolute; color: #dc3545">Usuário deletado.</p>
+                      <%} %>
                       <p></p>
                       <%- tableContent %>
                       

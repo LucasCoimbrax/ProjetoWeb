@@ -12,7 +12,8 @@ module.exports = {
       tableContent,
       vacines: "",
       edvGet: req.query.edv,
-      Foto: "user.png"
+      Foto: "user.png",
+      message: false
     });
   },
 
@@ -71,10 +72,31 @@ module.exports = {
         vacines += "</tr>";
       }
 
-      res.render("../views/perfilAdmin.ejs", { tableContent, vacines, edvGet, Foto });
+      res.render("../views/perfilAdmin.ejs", { tableContent, vacines, edvGet, Foto, message: false});
     } catch (e) {
       console.log(e);
       res.redirect("/perfilAdmin");
     }
   },
+
+  async deleteUser(req, res){
+    const edv = req.query.edv
+
+    await user.destroy({
+      where: { EDV:edv }  
+    })
+
+    var tableContent = "";
+    tableContent += "<tr><td>Nome: </td><td></td></tr>";
+    tableContent += "<tr><td>EDV: </td><td></td></tr>";
+    tableContent += "<tr><td>Idade: </td><td></td></tr>";
+    tableContent += "<tr><td>Email: </td><td></td></tr>";
+    res.render("../views/perfilAdmin.ejs", {
+      tableContent,
+      vacines: "",
+      edvGet: req.query.edv,
+      Foto: "user.png",
+      message: true
+    });
+  }
 };
