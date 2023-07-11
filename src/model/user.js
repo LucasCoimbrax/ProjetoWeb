@@ -1,46 +1,45 @@
 // Importação
-const Sequelize = require('sequelize');
-const database = require('../config/bd');
+const Sequelize = require("sequelize");
+const database = require("../config/bd");
 
-const vacine = require('./vacine')
- 
+const vacine = require("./vacine");
+
 // Criando a tabela Sala
-const user = database.define('User', {
+const user = database.define("User", {
+  EDV: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+  },
 
-    EDV: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        primaryKey: true
-    },
-    
-    Nome: {
-        type: Sequelize.STRING(50),
-        allowNull: false
-    },
- 
-    Email: {
-        type: Sequelize.STRING(100),
-        allowNull: false
-    },
+  Nome: {
+    type: Sequelize.STRING(50),
+    allowNull: false,
+  },
 
-    Telefone: {
-        type: Sequelize.STRING(11),
-        allowNull: false
-    },
+  Email: {
+    type: Sequelize.STRING(100),
+    allowNull: false,
+  },
 
-    DateBirth: {
-        type: Sequelize.STRING(10),
-        allowNull: false
-    },
+  Telefone: {
+    type: Sequelize.STRING(11),
+    allowNull: false,
+  },
 
-    Idade: {
-        type: Sequelize.INTEGER
-    },
+  Foto: {
+    type: Sequelize.STRING(50),
+  },
 
-    Foto: {
-        type: Sequelize.STRING(50),
-        allowNull: false
-    }
+  Idade: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+  },
+
+  DateBirth: {
+    type: Sequelize.STRING(10),
+    allowNull: false,
+  },
 });
 
 // Exportando essa tabela

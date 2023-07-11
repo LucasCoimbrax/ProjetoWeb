@@ -87,7 +87,7 @@
                 class="btn btn-outline-secondary"
                 type="submit"
               >
-                Button
+                Search
               </button>
             </form>
           </div>
@@ -107,7 +107,7 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-4">
-                  <img
+                    <img
                     src="/img/<%= Foto %>"
                     class="card-img-top custom-img float-left"
                     style="border-radius: 50%;"
@@ -117,6 +117,9 @@
                 <div class="col-8 align-self-start">
                   <table >
                     <tbody>
+                      <a href="/cadasterVacine?edv=<%= edvGet %>" class="btn btn-outline-danger float-right">
+                        <img src="./img/remove.png" width="20" /> Delete this user
+                      </a>
                       <p></p>
                       <%- tableContent %>
                       
