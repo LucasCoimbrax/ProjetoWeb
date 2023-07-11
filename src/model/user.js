@@ -28,17 +28,18 @@ const user = database.define('User', {
         allowNull: false
     },
 
-    DateBirth: {
-        type: Sequelize.STRING(10),
-        allowNull: false
-    },
-
-    Idade: {
-        type: Sequelize.INTEGER
-    },
 
     Foto: {
         type: Sequelize.STRING(50),
+    },
+    
+    Idade: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    
+    DateBirth: {
+        type: Sequelize.STRING(10),
         allowNull: false
     }
 });
