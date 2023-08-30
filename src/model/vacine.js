@@ -34,8 +34,9 @@ const vacine = database.define("Vacine", {
 
   //Essa vacina fica ativa por X anos.
   PeriodoAtivo: {
-    type: Sequelize.INTEGER,
-    allowNull: false,
+    type: Sequelize.STRING(15),
+    allowNull: true,
+    default: "Dose única"
   },
 
   //Essa vacina fica ativa por X anos.

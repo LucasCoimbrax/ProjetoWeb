@@ -50,5 +50,9 @@ module.exports = {
       { where: { EDV: req.query.EDV } }
     );
     res.redirect(`/perfilUser?EDV=${req.query.EDV}`);
-  }
+  },
+
+  async logout(req, res){
+    res.redirect("/");
+}
 };

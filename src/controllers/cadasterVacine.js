@@ -11,23 +11,28 @@ module.exports = {
     const edv = req.query.edv;
 
     try {
+      let isAtivo;
       if (
         !edv ||
         !dados.name ||
         !dados.fabricante ||
         !dados.infos ||
-        !dados.doses ||
-        !dados.periodoAtivo
+        !dados.doses
       ) {
         throw new Error("401 - Bad Request, Forms Invalid!");
       }
+
+      if(!dados.periodoAtivo && dados.doses==1){
+        isAtivo = "Dose Única";
+      }
+
 
       const vacinaID = await vacine.create({
         Nome: dados.name,
         Fabricante: dados.fabricante,
         Infos: dados.infos,
         Doses: dados.doses,
-        PeriodoAtivo: dados.periodoAtivo,
+        PeriodoAtivo: isAtivo,
         EDV: edv,
       });
 
@@ -35,5 +40,5 @@ module.exports = {
     } catch (e) {
       res.redirect("/cadasterVacine");
     }
-  },
+  }
 };

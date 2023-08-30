@@ -34,6 +34,9 @@ route.post('/cadasterVacine', cadasterVacine.cadasterVacine);
 route.post('/perfilUser',multer(config).single('foto'), perfilUser.insertFoto);
 
 
-route.post('/deleteUser', perfilAdmin.deleteUser)
+route.post('/deleteUser', perfilAdmin.deleteUser);
+
+route.get('/perfilAdminLogout', perfilAdmin.logout);
+route.get('/perfilUserLogout', perfilUser.logout);
 
 module.exports = route;

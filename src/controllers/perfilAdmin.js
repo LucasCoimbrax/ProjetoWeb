@@ -86,6 +86,10 @@ module.exports = {
       where: { EDV:edv }  
     })
 
+    await vacine.destroy({
+      where: { EDV:edv }  
+    })
+
     var tableContent = "";
     tableContent += "<tr><td>Nome: </td><td></td></tr>";
     tableContent += "<tr><td>EDV: </td><td></td></tr>";
@@ -98,5 +102,8 @@ module.exports = {
       Foto: "user.png",
       message: true
     });
-  }
+  },
+  async logout(req, res){
+    res.redirect("/loginAdmin");
+}
 };
